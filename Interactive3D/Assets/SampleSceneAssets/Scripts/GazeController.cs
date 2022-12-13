@@ -53,9 +53,9 @@ public class GazeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && currentGazeObject != null)
+        if(Input.GetKeyDown(KeyCode.F) && currentGazeObject != null)
         {
-          currentGazeObject.TriggerInteraction();
+         currentGazeObject.TriggerInteraction();
         }
     }
 }
