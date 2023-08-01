@@ -49,5 +49,9 @@ public class GazeController2 : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E) && currentGazedObject != null) {
             currentGazedObject.TriggerInteraction();
         }
+
+        else if(Input.GetKeyDown(KeyCode.Q) && currentGazedObject != null) {
+            currentGazedObject.TriggerInteraction();
+        }
     }
 }

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class SwapMaterialInteraction : InteractableObject
 {
-    // Array of materials
+    // Array of Materials
     public Material[] materials;
     
     // Mesh-Renderer to change
     public MeshRenderer[] renderers; 
 
-    // Index of current selected material
+    // Index of current selected Material
     private int currentIndex;
 
     void Start() 
