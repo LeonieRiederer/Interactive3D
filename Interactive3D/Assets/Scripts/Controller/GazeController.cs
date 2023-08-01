@@ -13,7 +13,9 @@ public class GazeController : MonoBehaviour
 
     public GameObject contextLabelContainer;
 
-    private InteractibleObject currentGazeObject;
+    private InteractableObject currentGazeObject;
+
+    private InteractableTeleport currentTeleportObject;
 
     private RectTransform contextLabelTransform;
 
@@ -30,12 +32,14 @@ public class GazeController : MonoBehaviour
       RaycastHit hit;
 
       if (Physics.Raycast(origin, forward, out hit, maxDistance) &&
-          hit.collider.gameObject.GetComponent<InteractibleObject>() != null)
+          hit.collider.gameObject.GetComponent<InteractableObject>() != null ||
+          hit.collider.gameObject.GetComponent<InteractableTeleport>() != null)
       {
         Debug.DrawRay(origin, forward * hit.distance, Color.green);
 
         contextLabelContainer.SetActive(true);
-        currentGazeObject = hit.collider.gameObject.GetComponent<InteractibleObject>();
+        currentGazeObject = hit.collider.gameObject.GetComponent<InteractableObject>();
+        currentTeleportObject = hit.collider.gameObject.GetComponent<InteractableTeleport>();
         contextLabel.text = currentGazeObject.commandText;
 
         LayoutRebuilder.ForceRebuildLayoutImmediate(contextLabelTransform);
@@ -47,15 +51,22 @@ public class GazeController : MonoBehaviour
         contextLabelContainer.SetActive(false);
         contextLabel.text = "";
         currentGazeObject = null;
+        currentTeleportObject = null;
       }
     }
 
     // Update is called once per frame
+    // Which Object is selected
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.E) && currentGazeObject != null)
         {
-         currentGazeObject.TriggerInteraction();
+         if(currentGazeObject) currentGazeObject.TriggerInteraction();
+        }
+
+        if(Input.GetKeyDown(KeyCode.F) && currentGazeObject != null)
+        {
+         if(currentTeleportObject) currentTeleportObject.TriggerTeleport();
         }
     }
 }

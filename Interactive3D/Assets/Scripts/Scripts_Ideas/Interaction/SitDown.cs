@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SitDown : InteractableObject
+public class SitDown : InteractableTeleport
 {
     public Vector3 savePlayerPosition;
     public Vector3 savePlayerRotation;
@@ -23,21 +23,19 @@ public class SitDown : InteractableObject
 
     void Update()
     {
-        if (isTeleported && Input.GetKeyDown(KeyCode.E))
+        if (isTeleported && Input.GetKeyDown(KeyCode.F))
         {
-            // Activate Character Controller again & reset Player Position to previous
-            movement.enabled = true; // print("UPDATE: " + savePlayerPosition);
+            movement.enabled = true;
             player.transform.position = savePlayerPosition;
             player.transform.eulerAngles = savePlayerRotation;
 
-            // Player not anymore teleported
+            // Player teleportiert nicht
             isTeleported = false;
         }
 
-        // print(message: isTeleported);
     }
 
-    public override void TriggerInteraction()
+    public override void TriggerTeleport()
     {
         if (!isTeleported) 
         {
