@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2160.166, g: 2263.787, b: 3301.2344, a: 1}
+  m_IndirectSpecularColor: {r: 2158.2666, g: 2262.1523, b: 3300.414, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5567,6 +5567,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8557288428446368794, guid: 95a1c83d0e6ef50408e0b35e46a7a693, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 54e7c1ffcd11c2449bd5c5e075c798ec, type: 2}
     - target: {fileID: 919132149155446097, guid: 95a1c83d0e6ef50408e0b35e46a7a693, type: 3}
       propertyPath: m_Name
       value: Dusche
