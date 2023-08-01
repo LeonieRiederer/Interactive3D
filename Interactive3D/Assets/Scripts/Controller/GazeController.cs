@@ -32,14 +32,13 @@ public class GazeController : MonoBehaviour
       RaycastHit hit;
 
       if (Physics.Raycast(origin, forward, out hit, maxDistance) &&
-          hit.collider.gameObject.GetComponent<InteractableObject>() != null ||
-          hit.collider.gameObject.GetComponent<InteractableTeleport>() != null)
+          hit.collider.gameObject.GetComponent<InteractableObject>() != null)
       {
         Debug.DrawRay(origin, forward * hit.distance, Color.green);
 
         contextLabelContainer.SetActive(true);
         currentGazeObject = hit.collider.gameObject.GetComponent<InteractableObject>();
-        currentTeleportObject = hit.collider.gameObject.GetComponent<InteractableTeleport>();
+        //currentTeleportObject = hit.collider.gameObject.GetComponent<InteractableTeleport>();
         contextLabel.text = currentGazeObject.commandText;
 
         LayoutRebuilder.ForceRebuildLayoutImmediate(contextLabelTransform);
@@ -51,7 +50,7 @@ public class GazeController : MonoBehaviour
         contextLabelContainer.SetActive(false);
         contextLabel.text = "";
         currentGazeObject = null;
-        currentTeleportObject = null;
+        //currentTeleportObject = null;
       }
     }
 
