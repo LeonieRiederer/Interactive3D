@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2159.2568, g: 2262.9824, b: 3300.7617, a: 1}
+  m_IndirectSpecularColor: {r: 2158.9443, g: 2262.6992, b: 3300.504, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17500,11 +17500,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6df122732f4b53419605e750b9f4203, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3700955
+      value: 3.345
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6df122732f4b53419605e750b9f4203, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.1129614
+      value: 1.213
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6df122732f4b53419605e750b9f4203, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17534,13 +17534,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e6df122732f4b53419605e750b9f4203, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3ad04bfcb5fef284bb66677b6954a3d7, type: 2}
     - target: {fileID: 919132149155446097, guid: e6df122732f4b53419605e750b9f4203, type: 3}
       propertyPath: m_Name
       value: Screen
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e6df122732f4b53419605e750b9f4203, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6df122732f4b53419605e750b9f4203, type: 3}
@@ -24209,6 +24213,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   commandText: "\xD6ffnen"
   Tuer: {fileID: 931768020}
+--- !u!1 &2034688407 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e6df122732f4b53419605e750b9f4203, type: 3}
+  m_PrefabInstance: {fileID: 1722170383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2034688408 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: e6df122732f4b53419605e750b9f4203, type: 3}
+  m_PrefabInstance: {fileID: 1722170383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2034688410
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034688407}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.2967215, y: 1.165208, z: 0.45152462}
+  m_Center: {x: -0.0018048286, y: 0.073326446, z: 0.038232464}
+--- !u!114 &2034688411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034688407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb3f1c12770f534886974af27e8fea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandText: PlayVideo
+  videoSource: {fileID: 2034688412}
+  videoClip: {fileID: 32900000, guid: 31e6d1082f1836b4ba477606a2e314ae, type: 3}
+--- !u!328 &2034688412
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034688407}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 31e6d1082f1836b4ba477606a2e314ae, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 2034688408}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
+  m_Url: 
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &2050345574 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1857413084416333593, guid: 14d7b5c231681cd4087723ed60e38bb5, type: 3}
