@@ -5,22 +5,17 @@ using UnityEngine;
 /*public class SctivateBed : InteractableObject
 {
     // Array of GameObjects
-    public GameObject [] bett;
-
-    public ChangeGameObject
-   
-
-    // Index of current selected GameObject
-    private int currentIndex;
+    public GameObject Bett1;
+    public GameObject Bett1;
 
     void Start() 
     {
-        ChangeGameObject(0);
+   
     }
 
     public override void TriggerInteraction() 
     {
-        ChangeGameObject(currentIndex + 1);
+        if
     }
 }*/
 
