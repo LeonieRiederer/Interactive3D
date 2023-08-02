@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Active : InteractableObject
 {
-    public GameObject Bett;
+    public GameObject [] Bett;
 
-    private bool currentBettState;
+    private int currentBettIndex = 0;
 
     public override void TriggerInteraction()
     {
-        currentBettState = Bett.activeSelf;
-        Bett.SetActive(!currentBettState);
+        Bett[currentBettIndex].SetActive (false);
+        currentBettIndex =(currentBettIndex+1) % Bett.Length;
+        Bett[currentBettIndex].SetActive (true);
 
-        if (!currentBettState)
+        if (currentBettIndex==1)
         {
             commandText = "Bett 1";
         }
