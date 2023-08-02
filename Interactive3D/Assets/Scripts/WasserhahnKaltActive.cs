@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WasserhahnKaltActive : InteractableObject
+public class Active : InteractableObject
 {
     public GameObject Wassertropfen;
 
@@ -15,11 +15,11 @@ public class WasserhahnKaltActive : InteractableObject
 
         if (!currentWasserhahnState)
         {
-            commandText = "Kalt Aus";
+            commandText = "Aus";
         }
         else 
         {
-            commandText = "Kalt An";
+            commandText = "An";
         }
     }
 }
