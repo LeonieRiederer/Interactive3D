@@ -2,16 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenTrashBin : MonoBehaviour
+/*public class OpenTrashBin : InteractableObject
 {
-    /*public Animator openTrashbin;
+    /*private Animator animator;
 
-    private bool currentStateBad;
+    private bool isAnimating = false;
 
     public override void TriggerInteraction()
     {
-        currentStateBad = openTrashbin.GetBool("opendedTrashbin");
-        opendedTrashbin.SetBool("opendedTrashbin", !currentStateBad);
+        animator = GetComponent<Animator>();
     }
-    */
-}
+
+    void Update()
+    {
+        if (!isAnimating)
+        {
+        animator.SetBool("isAnimating", true);
+        isAnimating = true;
+        }
+
+        else if (isAnimating)
+        {
+            animator.SetBool("isAnimating", true);
+            isAnimating = false;
+
+        }
+        */
+    
+
