@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2158.9248, g: 2262.709, b: 3300.4883, a: 1}
+  m_IndirectSpecularColor: {r: 2155.5708, g: 2258.6147, b: 3293.9487, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6874,6 +6874,47 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 99c54f10b3de9e446b47d1f07c7ceaef, type: 3}
   m_PrefabInstance: {fileID: 176424244}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &176424246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 99c54f10b3de9e446b47d1f07c7ceaef, type: 3}
+  m_PrefabInstance: {fileID: 176424244}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &176424247 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 99c54f10b3de9e446b47d1f07c7ceaef, type: 3}
+  m_PrefabInstance: {fileID: 176424244}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &176424248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176424246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7b4fdaa00cf8f43bf3badf8b6a5f6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandText: Material tauschen
+  materials:
+  - {fileID: 2100000, guid: bb9f019a2625eb24b9039de9622f4fd7, type: 2}
+  - {fileID: 2100000, guid: 0dfd90b060b40804c9681f1f2b6c2300, type: 2}
+  renderers:
+  - {fileID: 176424247}
+--- !u!65 &176424249
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176424246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5398326, y: 0.06265962, z: 0.5110004}
+  m_Center: {x: -0.06929159, y: 0.6698119, z: -0.9128858}
 --- !u!1 &181363347
 GameObject:
   m_ObjectHideFlags: 0
@@ -77344,6 +77385,62 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 76d90f8e7b68008449807a806c265254, type: 3}
   m_PrefabInstance: {fileID: 2140393891}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2140936326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2140936328}
+  - component: {fileID: 2140936327}
+  m_Layer: 0
+  m_Name: Decal Projector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2140936327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140936326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 2
+  m_Material: {fileID: 2100000, guid: d3e014368259f364d8d7639c7868155e, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_AffectsTransparency: 0
+  m_DecalLayerMask: 1
+  m_Offset: {x: 0, y: 0, z: 0.5}
+  m_Size: {x: 0.3, y: 0.3, z: 1}
+  m_FadeFactor: 1
+--- !u!4 &2140936328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140936326}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -4.748, y: 1.451, z: 1.362}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &1284320309751193933
 Transform:
   m_ObjectHideFlags: 0
